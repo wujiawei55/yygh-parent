@@ -1,0 +1,30 @@
+server:
+  port: 8204
+spring:
+  application:
+    name: service-msm
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss   # json的全局时间格式
+    time-zone: GMT+8
+  redis:
+    host: 42.192.9.219
+    port: 7537
+    password: lyx_dt985_07lj
+    lettuce:
+      pool:
+        max-idle: 5
+        min-idle: 0
+  rabbitmq:
+    host: 42.192.9.219
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+aliyun:
+  sms:
+    regionId: default
+    accessKeyId: LTAI4FfZDMsjnJuoD512zhbS
+    secret: e8GrPmAOUjFDlHb6u2Hu6JFaejId4O

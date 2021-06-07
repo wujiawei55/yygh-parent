@@ -1,0 +1,33 @@
+server:
+  port: 8202
+spring:
+  application:
+    name: service-cmn
+    # 环境设置：dev、test、prod spring.profiles.active=dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yygh_cmn?useSSL=false
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss   # json的全局时间格式
+    time-zone: GMT+8
+  main:
+    banner-mode: off
+  redis:
+    host: 42.192.9.219
+    port: 7537
+    password: lyx_dt985_07lj
+    lettuce:
+      pool:
+        max-idle: 5
+        min-idle: 0
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
